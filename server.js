@@ -5,11 +5,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var skillsRouter = require('./routes/skills');
+const skillsRouter = require('./routes/skills');
 
 var app = express();
 
 // view engine setup
+//this line below automatically set our view engine to look into our views folder, it knows to look for ejs ONLY
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

@@ -14,9 +14,9 @@ function index(req, res) {
 }
 
 function show(req, res) {
-    console.log('THIS IS REQ.PARAMS ', req.params)
     res.render('skills/show', {
       skill: Skill.getOne(req.params.id),
       title: 'Express Dev-Skills Show'
     });
   }
+  
