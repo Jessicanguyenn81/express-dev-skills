@@ -3,7 +3,9 @@
 const Skill = require('../models/skill')
 
 module.exports = {
-    index, show
+    index, 
+    show, 
+    new: newSkill
 }
 
 function index(req, res) {
@@ -19,4 +21,7 @@ function show(req, res) {
       title: 'Express Dev-Skills Show'
     });
   }
-  
+
+  function newSkill(req, res) {
+    res.render('skills/new')
+  }
